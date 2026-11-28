@@ -9,10 +9,10 @@ export default [
   reactHooks.configs.flat.recommended,
   reactRefresh.configs.vite,
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.{js,jsx,mjs}'],
     languageOptions: {
       ecmaVersion: 2022,
-      globals: globals.browser,
+      globals: { ...globals.browser, ...globals.node },
       parserOptions: { ecmaVersion: 'latest', ecmaFeatures: { jsx: true }, sourceType: 'module' },
     },
     rules: { 'no-unused-vars': ['error', { varsIgnorePattern: '^(motion|[A-Z_])' }] },
