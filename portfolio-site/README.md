@@ -1,6 +1,6 @@
-# JARVIS portfolio
+# MAGGI portfolio
 
-A cinematic, responsive product portfolio for the JARVIS personal AI project. It presents the capabilities already implemented in the desktop application, including live voice, computer control, persistent memory, Research and Office Studio, background routines, the paired phone dashboard, and the God’s Eye observatory.
+A cinematic, responsive product portfolio for the MAGGI personal AI project. It presents the capabilities already implemented in the desktop application, including live voice, computer control, persistent memory, Research and Office Studio, background routines, the paired phone dashboard, and the God’s Eye observatory.
 
 ## Experience
 

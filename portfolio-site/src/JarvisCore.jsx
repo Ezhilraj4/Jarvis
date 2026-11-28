@@ -131,5 +131,5 @@ export default function JarvisCore() {
     }
   }, [])
 
-  return <div className="core-canvas" ref={mountRef} aria-label="Interactive three dimensional JARVIS intelligence core" role="img" />
+  return <div className="core-canvas" ref={mountRef} aria-label="Interactive three dimensional MAGGI intelligence core" role="img" />
 }

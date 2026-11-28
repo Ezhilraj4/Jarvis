@@ -26,7 +26,7 @@ import {
   X,
 } from '@phosphor-icons/react'
 
-const JarvisCore = lazy(() => import('./JarvisCore.jsx'))
+const MaggiCore = lazy(() => import('./JarvisCore.jsx'))
 const GodEyeGlobe = lazy(() => import('./GodEyeGlobe.jsx'))
 
 const reveal = {
@@ -45,7 +45,7 @@ const capabilityGroups = [
   {
     label: 'See the screen',
     icon: Camera,
-    copy: 'Screen and camera understanding flow into the active conversation, so JARVIS can inspect what you see and act with context.',
+    copy: 'Screen and camera understanding flow into the active conversation, so MAGGI can inspect what you see and act with context.',
   },
   {
     label: 'Control the computer',
@@ -94,7 +94,7 @@ const studios = [
 const faqs = [
   ['Is this only a chat interface?', 'No. The project combines live voice, screen and camera context, computer actions, local memory, studios, monitoring, remote phone control, and plugin tools.'],
   ['Does it work on more than Windows?', 'The project targets Windows, macOS, and Linux. Some system integrations use the native scheduling and startup tools provided by each operating system.'],
-  ['Can JARVIS make PowerPoint files?', 'Yes. Office Studio can create editable PPTX decks with themes, speaker notes, source links, transitions, charts, and supplied or licensed images.'],
+  ['Can MAGGI make PowerPoint files?', 'Yes. Office Studio can create editable PPTX decks with themes, speaker notes, source links, transitions, charts, and supplied or licensed images.'],
   ['What happens when an AI model is unavailable?', 'One shot requests use a measured nine model ladder with deadlines and cooldowns. Live voice uses a smaller compatible fallback path.'],
   ['Is phone access exposed to the public internet?', 'No. The included dashboard is designed to pair with the authenticated desktop server on the same local network. A public relay would need separate security work.'],
   ['Can it remember private information?', 'Memory is stored locally and can be inspected or deleted. Machine issued credentials are refused or masked so they do not become ordinary remembered facts.'],
@@ -111,7 +111,7 @@ function Nav() {
   ]
   return (
     <nav className="nav-shell" aria-label="Primary navigation">
-      <a href="#top" className="brand" aria-label="JARVIS home"><span className="brand-mark">J</span><span>JARVIS</span></a>
+      <a href="#top" className="brand" aria-label="MAGGI home"><span className="brand-mark">M</span><span>MAGGI</span></a>
       <div className="desktop-nav">
         {links.map(([label, href]) => <a key={label} href={href}>{label}</a>)}
       </div>
@@ -133,7 +133,7 @@ function Nav() {
 function TaglineReveal() {
   const words = 'One voice to understand the moment. One system to move the work forward.'.split(' ')
   return (
-    <section className="tagline-section" aria-label="JARVIS promise">
+    <section className="tagline-section" aria-label="MAGGI promise">
       <p>
         {words.map((word, index) => (
           <motion.span key={`${word}-${index}`} initial={{ color: 'rgba(255,255,255,0.28)' }} whileInView={{ color: '#ffffff' }} viewport={{ once: true, amount: 1 }} transition={{ duration: 0.5, delay: index * 0.045, ease: [0.22, 1, 0.36, 1] }}>{word}{' '}</motion.span>
@@ -162,7 +162,7 @@ function App() {
             <motion.div {...reveal}>
               <p className="eyebrow"><span /> Personal AI system</p>
               <h1>Your digital world.<br />One command away.</h1>
-              <p className="hero-copy">JARVIS can hear, see, speak, remember, research, create real files, control your computer, and stay with you from desktop to phone.</p>
+              <p className="hero-copy">MAGGI can hear, see, speak, remember, research, create real files, control your computer, and stay with you from desktop to phone.</p>
               <div className="hero-actions">
                 <a className="button button-primary" href="#capabilities">Explore every capability <ArrowRight size={18} weight="bold" /></a>
                 <a className="button button-secondary" href="#architecture"><Play size={18} weight="fill" /> See how it works</a>
@@ -170,7 +170,7 @@ function App() {
               <div className="proof-line"><ShieldCheck size={20} /><span>Local first memory</span><span>Three operating systems</span><span>Extensible tools</span></div>
             </motion.div>
           </div>
-          <div className="hero-core"><Suspense fallback={<div className="scene-skeleton" aria-label="Loading three dimensional scene" />}><JarvisCore /></Suspense></div>
+          <div className="hero-core"><Suspense fallback={<div className="scene-skeleton" aria-label="Loading three dimensional scene" />}><MaggiCore /></Suspense></div>
           <div className="hero-status" aria-label="System status"><span className="status-dot" /> System online <span>Gemini Live</span></div>
         </section>
 
@@ -207,11 +207,11 @@ function App() {
         <section className="section studios" id="studios">
           <motion.div className="section-heading split-heading" {...reveal}>
             <div><p className="eyebrow"><span /> Workspaces</p><h2>Four rooms.<br />One intelligence.</h2></div>
-            <p>JARVIS changes its surface to match the work while the conversation, tools, and context stay connected.</p>
+            <p>MAGGI changes its surface to match the work while the conversation, tools, and context stay connected.</p>
           </motion.div>
           <div className="studio-layout">
             <motion.div className="studio-visual" {...reveal}>
-              <img src="/assets/jarvis-command-core.png" alt="A detailed JARVIS command core visualization" />
+              <img src="/assets/jarvis-command-core.png" alt="A detailed MAGGI command core visualization" />
               <div className="studio-overlay">
                 <span>Active workspace</span>
                 <strong>Command Center</strong>
@@ -264,7 +264,7 @@ function App() {
             <div className="architecture-node edge-node"><Microphone size={22} /><span>Voice</span></div>
             <div className="architecture-node edge-node"><Monitor size={22} /><span>Desktop</span></div>
             <div className="architecture-node edge-node"><DeviceMobile size={22} /><span>Phone</span></div>
-            <div className="architecture-node core-node"><Sparkle size={28} weight="fill" /><strong>JARVIS core</strong><span>Live context</span></div>
+            <div className="architecture-node core-node"><Sparkle size={28} weight="fill" /><strong>MAGGI core</strong><span>Live context</span></div>
             <div className="architecture-node edge-node"><Brain size={22} /><span>Models</span></div>
             <div className="architecture-node edge-node"><Memory size={22} /><span>Memory</span></div>
             <div className="architecture-node edge-node"><Stack size={22} /><span>Tools</span></div>
@@ -288,7 +288,7 @@ function App() {
           <div className="flow-grid">
             {[
               ['01', 'Ask', 'Speak, type, share a file, show the screen, or call from the paired phone.'],
-              ['02', 'Reason', 'JARVIS keeps the live context, selects tools, checks memory, and plans the steps.'],
+              ['02', 'Reason', 'MAGGI keeps the live context, selects tools, checks memory, and plans the steps.'],
               ['03', 'Act', 'The system controls the computer, researches, creates a file, or runs a background task.'],
               ['04', 'Return', 'You receive one spoken reply, a visible result, an editable artifact, or a timely alert.'],
             ].map(([number, title, text], index) => (
@@ -308,7 +308,7 @@ function App() {
                 </article>
               ))}
             </div>
-            <aside className="faq-aside"><ChartLineUp size={32} /><h3>Built from a working project</h3><p>Every capability on this page maps to an action, interface, integration, or documented subsystem in the JARVIS codebase.</p><a href="#architecture">Review the architecture <ArrowRight size={17} /></a></aside>
+            <aside className="faq-aside"><ChartLineUp size={32} /><h3>Built from a working project</h3><p>Every capability on this page maps to an action, interface, integration, or documented subsystem in the MAGGI codebase.</p><a href="#architecture">Review the architecture <ArrowRight size={17} /></a></aside>
           </div>
         </section>
 
@@ -324,10 +324,10 @@ function App() {
       </main>
 
       <footer>
-        <div className="footer-brand"><span className="brand-mark">J</span><div><strong>JARVIS</strong><p>Your digital world, one command away.</p></div></div>
+        <div className="footer-brand"><span className="brand-mark">M</span><div><strong>MAGGI</strong><p>Your digital world, one command away.</p></div></div>
         <div className="footer-links"><a href="#capabilities">Capabilities</a><a href="#studios">Studios</a><a href="#architecture">Architecture</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a></div>
         <a className="footer-source" href="https://github.com/Ezhilraj4/Jarvis/tree/main/portfolio-site" target="_blank" rel="noreferrer"><GithubLogo size={20} /><span>Built with React and Three.js</span></a>
-        <div className="legal" id="privacy"><strong>Privacy</strong><p>This portfolio does not collect personal data. The JARVIS desktop project keeps its own local memory and configuration on the user’s computer.</p></div>
+        <div className="legal" id="privacy"><strong>Privacy</strong><p>This portfolio does not collect personal data. The MAGGI desktop project keeps its own local memory and configuration on the user’s computer.</p></div>
         <div className="legal" id="terms"><strong>Terms</strong><p>This site describes the project as built. AI outputs, academic research, system actions, and public data sources should be reviewed before important use.</p></div>
       </footer>
     </div>
